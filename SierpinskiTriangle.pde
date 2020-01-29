@@ -1,6 +1,6 @@
 public void setup()
 {
-  size(500,500);
+  size(800,800);
 }
 public void draw()
 {
@@ -8,13 +8,12 @@ public void draw()
 }
 public void mouseClicked()//optional
 {
-  redraw();
+  
 }
 public void sierpinski(int x, int y, int len) 
 {
-  if(len <= 500) {
-    fill(len - 255);
-    triangle(x, y, x + len, y, (x + len)/2, y - len); 
+  if(len <= 5) {
+    triangle(x, y, x + len, y, x + len/2, y - len); 
   } else {
     sierpinski(x, y, len/2);
     sierpinski(x + len/2, y, len/2);
